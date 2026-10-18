@@ -1,0 +1,180 @@
+body {
+  font-size: 15px;
+}
+
+.brand strong {
+  letter-spacing: 0.04em;
+}
+
+.brand-mark,
+.about-avatar,
+.footer-brand {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.brand-mark {
+  font-size: 19px;
+}
+
+.profile-frame {
+  width: 300px;
+  height: 390px;
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  border-radius: 26px;
+  background: var(--surface);
+  box-shadow: 0 24px 65px rgba(19, 16, 30, 0.24), 0 0 0 7px rgba(255, 255, 255, 0.16);
+}
+
+.profile-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.profile-frame::after {
+  content: "";
+  position: absolute;
+  inset: 38% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(16, 13, 24, 0.72));
+  pointer-events: none;
+}
+
+.frame-caption {
+  z-index: 1;
+  bottom: 20px;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.frame-caption .status-light {
+  box-shadow: 0 0 10px rgba(158, 243, 189, 0.7);
+}
+
+.about-photo-frame {
+  width: 210px;
+  height: 270px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background: var(--surface);
+  box-shadow: 0 16px 38px rgba(19, 16, 30, 0.16), 0 0 0 6px rgba(120, 67, 215, 0.08);
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 27%;
+}
+
+.brand:hover .brand-mark,
+.about-card:hover .about-avatar,
+.footer-brand:hover {
+  transform: translateY(-3px) rotate(-3deg);
+  box-shadow: 0 10px 26px rgba(120, 67, 215, 0.2);
+}
+
+.intro-card,
+.responsibility-card,
+.tool-card,
+.skill-row,
+.quote-card,
+.about-card,
+.lab-window {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.intro-card:hover,
+.responsibility-card:hover,
+.tool-card:hover,
+.skill-row:hover {
+  box-shadow: var(--shadow);
+}
+
+.btn,
+.icon-btn,
+.language-btn,
+.menu-toggle,
+.run-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover,
+.run-btn:hover {
+  box-shadow: 0 10px 26px rgba(91, 63, 160, 0.22);
+}
+
+:focus-visible {
+  outline: 3px solid var(--purple);
+  outline-offset: 3px;
+}
+
+body.light {
+  --bg: #f5f3ee;
+  --surface: #fcfbf8;
+  --surface2: #ebe8e1;
+  --text: #252432;
+  --muted: #555462;
+  --purple: #563a98;
+  --lav: #503786;
+  --line: rgba(46, 42, 59, 0.17);
+  --shadow: 0 14px 38px rgba(48, 42, 65, 0.09);
+  --header: rgba(248, 247, 243, 0.94);
+}
+
+body.light .gradient-text {
+  background: linear-gradient(100deg, #503786, #7548b5);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.light .btn-primary {
+  background: linear-gradient(120deg, #60429f, #49317e);
+  color: #fff;
+}
+
+body.light .tag-top {
+  color: #21633c;
+}
+
+body.light .profile-frame {
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 24px 65px rgba(48, 42, 65, 0.16), 0 0 0 7px rgba(80, 55, 134, 0.08);
+}
+
+body.light .frame-caption {
+  color: #f4ecff;
+}
+
+@media (max-width: 760px) {
+  .brand strong {
+    font-size: 14px;
+  }
+
+  .profile-frame {
+    width: 270px;
+    height: 350px;
+  }
+
+  .about-photo-frame {
+    width: 180px;
+    height: 230px;
+    margin: 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
